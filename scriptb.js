@@ -52,3 +52,30 @@ var affichageHeure = function(){
 };
 
 affichageHeure();
+
+
+// Récupération des éléments
+const openPopup = document.getElementById("openPopup");
+const closePopup = document.getElementById("closePopup");
+const close = document.getElementById('okButton');
+const popup = document.getElementById("popup");
+
+// Afficher la pop-up
+openPopup.addEventListener("click", () => {
+    popup.style.display = "flex"; // Utilise flexbox pour centrer
+});
+
+// Fermer la pop-up
+closePopup.addEventListener("click", () => {
+    popup.style.display = "none";
+});
+close.addEventListener('click', () => {
+    popup.style.display = 'none';
+})
+
+// Option : Fermer la pop-up en cliquant en dehors
+window.addEventListener("click", (e) => {
+    if (e.target === popup) {
+        popup.style.display = "none";
+    }
+});
