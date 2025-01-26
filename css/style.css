@@ -8,13 +8,14 @@
 }
 
 body {
-    /* background-image: url(../images/blur\ alpes.jpg); */
+    background-image: url(../images/blur\ alpes.jpg);
     background-size: cover; /* Ensures the image covers the entire viewport without distortion */
     background-repeat: no-repeat; /* Prevents tiling of the image */
     display: flex;
     justify-content: center;
     align-items: center;
     color: #fff;
+    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .horloge {
@@ -149,21 +150,21 @@ nav {
 }
 
 
-#content {
+/* Basic page transition */
+.page {
     opacity: 1;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;  /* Fades in/out over 0.5 seconds */
 }
 
-/* Add a class for fade-out effect */
-.fade-out {
+.page.fade-out {
     opacity: 0;
 }
 
-/* Fade-in effect for new content */
-.fade-in {
+.page.fade-in {
     opacity: 0;
-    animation: fadeIn 0.5s forwards;
+    animation: fadeIn 0.5s forwards;  /* Smooth fade-in for the new page */
 }
+
 @keyframes fadeIn {
     to {
         opacity: 1;
