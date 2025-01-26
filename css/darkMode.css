@@ -1,14 +1,73 @@
 /* Mode clair par défaut */
+/* Mode clair par défaut */
 body.light-mode {
-    background-color: #f0f0f0;
-    color: #333;
+    background-color: #f0f0f0; /* Light background */
+    color: #333; /* Dark text color for readability in light mode */
 }
 
+/* Explicit text color for elements within light mode */
+body.light-mode .horloge, 
+body.light-mode .heures, 
+body.light-mode .date, 
+body.light-mode .am-pm, 
+body.light-mode .heuresb, 
+body.light-mode .dateb,
+body.light-mode .popup-content,
+body.light-mode .left li a {
+    color: #333; /* Dark text for better contrast */
+}
+
+/* You can also specify specific colors for links and other elements */
+body.light-mode .left li a {
+    color: #000000; /* Blue color for links in light mode */
+}
+
+body.light-mode .right {
+    background-color: #007bff; /* Light blue background for buttons */
+}
+
+body.light-mode .right:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* If you want to change the popup content text as well in light mode */
+body.light-mode .popup-content {
+    color: #121212; /* Dark text in popup for light mode */
+    background-color: #ffffff; /* Light background for readability */
+}
 /* Mode sombre */
 body.dark-mode {
     background-color: #121212;
-    color: #f5f5f5;
+    color: #f5f5f5; /* Set text color to a lighter color in dark mode */
 }
-body.light-mode nav {
-    color: #333;
+
+/* Explicit text color for elements within dark mode */
+body.dark-mode .horloge, 
+body.dark-mode .heures, 
+body.dark-mode .date, 
+body.dark-mode .am-pm, 
+body.dark-mode .heuresb, 
+body.dark-mode .dateb,
+body.dark-mode .popup-content,
+body.dark-mode .left li a {
+    color: #f5f5f5; /* Make sure text stays light */
+}
+
+/* You can also specify specific colors for links and other elements */
+body.dark-mode .left li a {
+    color: #f5f5f5; /* Light color for links in dark mode */
+}
+
+body.dark-mode .right {
+    background-color: #333; /* Darken buttons in dark mode */
+}
+
+body.dark-mode .right:hover {
+    background-color: #555; /* Slightly lighter on hover */
+}
+
+/* If you want to change the popup content text as well in dark mode */
+body.dark-mode .popup-content {
+    color: #121212; /* Dark text in popup for dark mode */
+    background-color: #f5f5f5; /* Light background for readability */
 }

@@ -7,15 +7,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href='../css/style.css'>
+    <link rel="stylesheet" href="../css/darkMode.css">
     <title>Custom clock</title>
 </head>
-<body>
+<body >
     <nav>
-        <ul>
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="clock.html">Clock</a></li>
-            <li><a href="tasks.html">Tasks</a></li>
-        </ul>
+        <div class="container">
+            <ul class="left">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="clock.html">Clock</a></li>
+                <li><a href="tasks.html">Tasks</a></li>
+            </ul>
+            <button id="openPopup" class="right">Change background</button>
+            <button id="darkModeToggle" class="right">
+                <img id="darkModeIcon" src="../images/moon.png" alt="Light Mode" />
+            </button>
+        </div>
     </nav>
     <div class="horloge">
         <div class="heures"></div>
@@ -26,5 +33,6 @@
 
 
     <script src="../js/scriptClock.js"></script>
+    <script src="../js/scriptDarkMode.js"></script>
 </body>
 </html>
