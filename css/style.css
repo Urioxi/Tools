@@ -148,3 +148,24 @@ nav {
     text-decoration: none;
 }
 
+
+#content {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Add a class for fade-out effect */
+.fade-out {
+    opacity: 0;
+}
+
+/* Fade-in effect for new content */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
