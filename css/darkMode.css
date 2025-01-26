@@ -1,0 +1,14 @@
+/* Mode clair par défaut */
+body.light-mode {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+/* Mode sombre */
+body.dark-mode {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+body.light-mode nav {
+    color: #333;
+}

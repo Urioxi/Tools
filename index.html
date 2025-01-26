@@ -8,17 +8,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Urioxi's tools</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stylePopUp.css">
+    <link rel="stylesheet" href="css/darkMode.css">
 </head>
 <body>
     <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="html/clock.html">Clock</a></li>
-            <li><a href="html/tasks.html">Tasks</a></li>
-            <li class="dropdown">
-                <a
-            </li>
-        </ul>
+        <div class="container">
+            <ul class="left">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="html/clock.html">Clock</a></li>
+                <li><a href="html/tasks.html">Tasks</a></li>
+            </ul>
+            <button id="openPopup" class="right">Change background</button>
+            <button id="darkModeToggle" class="right">
+                <img id="darkModeIcon" src="images/moon.png" alt="Light Mode" />
+            </button>
+        </div>
     </nav>
 
     <a class='clockindex' href='html/clock.html'>
@@ -28,10 +33,6 @@
             <div class="dateb"></div>
         </div>
     </a>
-
-    <!-- Pop up -->
-    <button id="openPopup">Change background</button>
-
     <div id="popup" class="popup">
         <div class="popup-content">
             <span id="closePopup" class="close">&times;</span>
@@ -40,6 +41,7 @@
             <button id="okButton">OK</button>
         </div>
     </div>
+    
 
 
     <script src="js/scriptIndex.js"></script>

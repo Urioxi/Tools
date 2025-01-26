@@ -8,7 +8,7 @@
 }
 
 body {
-    background-image: url(../images/blur\ alpes.jpg);
+    /* background-image: url(../images/blur\ alpes.jpg); */
     background-size: cover; /* Ensures the image covers the entire viewport without distortion */
     background-repeat: no-repeat; /* Prevents tiling of the image */
     display: flex;
@@ -24,8 +24,6 @@ body {
     align-items: center;
     color: #fff;
     text-shadow: 0 2px 50px rgba(10, 10, 10, 0.5);
-
-
 }
 
 /* clock in custom clock */
@@ -58,26 +56,56 @@ nav {
     padding-top: 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    
 }
-nav .logo {
-    width: 5%;
-    height: auto;
-    left: 5%;
+
+.container {
+    width: 100%; /* Important pour étendre la largeur du conteneur */
+    display: flex; /* Active Flexbox */
+    justify-content: space-between; /* Place les éléments aux extrémités */
+    align-items: center; /* Aligne verticalement */
 }
-nav ul li {
-    list-style: none;
-    display: inline-block;
-    margin-left: 2em;
+
+/* Liste des éléments à gauche */
+.left {
+    display: flex; /* Aligne les éléments horizontalement */
+    list-style: none; /* Supprime les puces */
+    margin: 0;
+    padding: 0;
 }
-nav li a {
+
+.left li {
+    margin-left: 2em; /* Espacement entre les items */
+}
+
+.left li a {
     text-decoration: none;
     color: #fff;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* Bouton à droite */
+.right {
+    background-color: #007bff; /* Couleur du bouton */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 3%; /* Pas nécessaire dans ce contexte */
+}
 
+.right:hover {
+    background-color: #0056b3; /* Couleur au survol */
+}
+.right img {
+    width: 32px;
+    height: 32px;
+    transition: transform 0.3s;
+}
+.right img:hover {
+    transform: rotate(20deg); /* Animation au survol */
+}
 /* clock in index */
 .clockPopUp {
     display: flex;
@@ -120,51 +148,3 @@ nav li a {
     text-decoration: none;
 }
 
-/* Masque la pop-up par défaut */
-.popup {
-    display: none; /* Cachée par défaut */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fond sombre transparent */
-    z-index: 1000; /* Toujours au-dessus */
-    justify-content: center;
-    align-items: center; /* Centrer verticalement */
-}
-
-/* Contenu de la pop-up */
-.popup-content {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 300px;
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Bouton de fermeture */
-.close {
-    position: absolute;
-    top: 10px;
-    right: 15px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-/* Animation de la pop-up (optionnel) */
-.popup-content {
-    animation: fadeIn 0.3s ease-out;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
-}

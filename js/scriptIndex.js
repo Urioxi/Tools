@@ -79,3 +79,28 @@ window.addEventListener("click", (e) => {
         popup.style.display = "none";
     }
 });
+
+
+//dark mode
+
+// Sélection des éléments
+const darkModeToggle = document.getElementById("darkModeToggle");
+const darkModeIcon = document.getElementById("darkModeIcon");
+const body = document.body;
+
+// Fonction pour basculer entre les modes
+darkModeToggle.addEventListener("click", () => {
+    // Basculer entre les classes 'dark-mode' et 'light-mode'
+    if (body.classList.contains("dark-mode")) {
+        body.classList.replace("dark-mode", "light-mode");
+        darkModeIcon.src = "../images/sun.png"; // Icône pour le mode clair
+        darkModeIcon.alt = "Light Mode";
+    } else {
+        body.classList.replace("light-mode", "dark-mode");
+        darkModeIcon.src = "../images/moon.png"; // Icône pour le mode sombre
+        darkModeIcon.alt = "Dark Mode";
+    }
+});
+
+// Initialisation : mode clair par défaut
+body.classList.add("light-mode");
