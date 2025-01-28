@@ -11,22 +11,32 @@
     <title>Custom clock</title>
 </head>
 <body >
+
+    <!-- Taskbar -->
     <nav>
-        <div class="container">
+        <div class="containerTaskBar">
             <ul class="left">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="clock.html">Clock</a></li>
                 <li><a href="tasks.html">Tasks</a></li>
             </ul>
-            <button id="openPopup" class="right">Change background</button>
-            <button id="darkModeToggle" class="right">
-                <img id="darkModeIcon" src="../images/moon.png" alt="Light Mode" />
-            </button>
+            <div class="right">
+                <button id="openPopup" class="rightB">Change background</button>
+                <button id="darkModeToggle" class="rightB">
+                    <img id="darkModeIcon" src="../images/moon.png" alt="Light Mode" />
+                </button>
+            </div>
         </div>
     </nav>
-    <div class="horloge">
-        <div class="heures"></div>
-        <div class="date"></div>
+
+    <div class="container">
+
+        <!-- Clock -->
+        <div class="horloge">
+            <div class="heures"></div>
+            <div class="date"></div>
+
+        </div>
 
     </div>
 
@@ -34,5 +44,6 @@
 
     <script src="../js/scriptClock.js"></script>
     <script src="../js/scriptDarkMode.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 </html>

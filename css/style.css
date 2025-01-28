@@ -15,11 +15,10 @@ body {
     justify-content: center;
     align-items: center;
     color: #fff;
-    transition: background-color 0.5s ease, color 0.5s ease;
 }
 
 .horloge {
-    margin-top: 15%;
+    margin-top: 35vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,7 +59,7 @@ nav {
     align-items: center;
 }
 
-.container {
+.containerTaskBar {
     width: 100%; /* Important pour étendre la largeur du conteneur */
     display: flex; /* Active Flexbox */
     justify-content: space-between; /* Place les éléments aux extrémités */
@@ -83,30 +82,37 @@ nav {
     text-decoration: none;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-
-/* Bouton à droite */
 .right {
-    background-color: #007bff; /* Couleur du bouton */
-    color: white;
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Align vertically */
+    gap: 1vw; /* Add space between the buttons */
+    margin-right: 3%; /* Optional: fine-tune the right alignment */
+}
+/* Bouton à droite */
+.rightB {
+    background-color: #f5f5dc; /* Couleur du bouton */
+    color: #fff;
     border: none;
     padding: 10px 15px;
-    border-radius: 5px;
+    border-radius: 10px;
     cursor: pointer;
     font-size: 16px;
     margin-right: 3%; /* Pas nécessaire dans ce contexte */
 }
 
-.right:hover {
-    background-color: #0056b3; /* Couleur au survol */
-}
-.right img {
+.rightB img {
     width: 32px;
     height: 32px;
     transition: transform 0.3s;
 }
-.right img:hover {
+.rightB img:hover {
     transform: rotate(20deg); /* Animation au survol */
 }
+#openPopup {
+    margin-right: 0px;
+}
+
+
 /* clock in index */
 .clockPopUp {
     display: flex;
@@ -150,23 +156,17 @@ nav {
 }
 
 
-/* Basic page transition */
-.page {
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;  /* Fades in/out over 0.5 seconds */
-}
+/* Pages transitions */
 
-.page.fade-out {
-    opacity: 0;
-}
+@keyframes transitionIn {
+    from {
+        opacity: 0;
+    }
 
-.page.fade-in {
-    opacity: 0;
-    animation: fadeIn 0.5s forwards;  /* Smooth fade-in for the new page */
-}
-
-@keyframes fadeIn {
     to {
         opacity: 1;
     }
+}
+.container {
+    animation: transitionIn 0.75s;
 }

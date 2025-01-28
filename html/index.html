@@ -13,40 +13,56 @@
     
 </head>
 <body>
+
+    <!-- Taskbar -->
     <nav>
-        <div class="container">
+        <div class="containerTaskBar">
             <ul class="left">
                 <li><a href="index.html" id="aboutLink">Home</a></li>
                 <li><a href="clock.html" id="aboutLink">Clock</a></li>
                 <li><a href="tasks.html" id="aboutLink">Tasks</a></li>
             </ul>
-            <button id="openPopup" class="right">Change background</button>
-            <button id="darkModeToggle" class="right">
-                <img id="darkModeIcon" src="../images/moon.png" alt="Light Mode" />
-            </button>
+
+            <div class="right">
+                <button id="openPopup" class="rightB">Change background</button>
+                <button id="darkModeToggle" class="rightB">
+                    <img id="darkModeIcon" src="../images/moon.png" alt="Light Mode" />
+                </button>
+            </div>
+
         </div>
     </nav>
 
-    <a class='clockindex' href='clock.html'>
+    <!-- Content -->
+    <div class="container">
 
-        <div class="clockPopUp">
-            <div class="heuresb"></div>
-            <div class="dateb"></div>
+        <!-- Popup -->
+        <div id="popup" class="popup">
+            <div class="popup-content">
+                <span id="closePopup" class="close">&times;</span>
+                <h2>Bienvenue !</h2>
+                <p>Ceci est une pop-up modale simple en HTML, CSS et JavaScript.</p>
+                <button id="okButton">OK</button>
+            </div>
         </div>
-    </a>
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <span id="closePopup" class="close">&times;</span>
-            <h2>Bienvenue !</h2>
-            <p>Ceci est une pop-up modale simple en HTML, CSS et JavaScript.</p>
-            <button id="okButton">OK</button>
-        </div>
+
+
+        <!-- Clock widget -->
+        <a class='clockindex' href='clock.html'>
+
+            <div class="clockPopUp">
+                <div class="heuresb"></div>
+                <div class="dateb"></div>
+            </div>
+        </a>
+        
+        
     </div>
-    
 
-
+    <!-- Scripts -->
     <script src="../js/scriptIndex.js"></script>
     <script src="../js/scriptDarkMode.js"></script>
+    <script src="../js/script.js"></script>
 
 </body>
 </html>
