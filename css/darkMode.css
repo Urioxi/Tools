@@ -75,29 +75,37 @@ body.dark-mode .popup-content {
 }
 
 
+/* Animation pour la transition clair -> sombre */
 @keyframes transitionLightDark {
     from {
-        opacity: 0;
+        opacity: 0.3; /* Transparence au début */
     }
     to {
-        opacity: 1;
-    }
-}
-@keyframes transitionDarkLight {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
+        opacity: 1; /* Pleine visibilité à la fin */
     }
 }
 
-/* body.light-mode {
-    animation: transitionDarkLight 0.75s;
+/* Animation pour la transition sombre -> clair */
+@keyframes transitionDarkLight {
+    from {
+        opacity: 0.3; /* Transparence au début */
+    }
+    to {
+        opacity: 1; /* Pleine visibilité à la fin */
+    }
 }
+
+bbody {
+    transition: opacity 1s ease-in-out; /* Appliquer la transition sur l'opacité */
+    animation: transitionLightDark 1s ease-in-out; /* Par défaut, transition du mode clair au mode sombre */
+}
+
+/* Lorsque le mode sombre est activé */
 body.dark-mode {
-    animation: transitionDarkLight 0.75s;
-} */
-body {
-    transition: color 1s ease;
+    animation: transitionDarkLight 0.5s ease-in-out;
+}
+
+/* Lorsque le mode clair est activé */
+body.light-mode {
+    animation: transitionLightDark 0.5s ease-in-out;
 }

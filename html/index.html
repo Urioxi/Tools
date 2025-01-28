@@ -40,8 +40,26 @@
         <div id="popup" class="popup">
             <div class="popup-content">
                 <span id="closePopup" class="close">&times;</span>
-                <h2>Bienvenue !</h2>
-                <p>Ceci est une pop-up modale simple en HTML, CSS et JavaScript.</p>
+
+
+                <div class="containerPop">
+                    <h1>Upload a Wallpaper</h1>
+                    
+                    <!-- Form to upload wallpaper -->
+                    <input type="file" id="uploadFile" accept="image/jpeg, image/png" />
+                    
+                    <button id="randomWallpaper" class='buttonPop'>Random Wallpaper</button>
+            
+                    <h2>Your Wallpapers</h2>
+                    <div id="wallpapersList">
+                        <!-- The list of saved wallpapers will be shown here -->
+                    </div>
+                </div>
+                
+
+
+
+
                 <button id="okButton">OK</button>
             </div>
         </div>

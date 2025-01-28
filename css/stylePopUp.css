@@ -48,3 +48,88 @@
         transform: scale(1);
     }
 }
+
+.containerPop {
+    text-align: center;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+input[type="file"] {
+    margin-top: 20px;
+}
+
+.buttonPop {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.buttonPop:hover {
+    background-color: #0056b3;
+}
+
+#wallpapersList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.wallpaper {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.wallpaper img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* Stylisation du bouton de suppression */
+.deleteButton {
+    background-color: #333; /* Couleur rouge douce */
+    color: white;
+    border: none;
+    padding: 6px; /* Réduit la taille du bouton */
+    border-radius: 50%; /* Assure une forme parfaitement circulaire */
+    cursor: pointer;
+    font-size: 14px; /* Taille de la croix plus appropriée */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 5px; /* Position verticale ajustée */
+    right: 5px; /* Position horizontale ajustée */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 30px; /* Taille fixe du bouton */
+    height: 30px; /* Taille fixe du bouton */
+    box-shadow: 0 2px 4px rgba(255, 71, 71, 0.3); /* Ombre douce */
+}
+
+/* Effet de survol */
+.deleteButton:hover {
+    background-color: rgba(0, 0, 0, 0.863); /* Rouge plus foncé */
+    transform: scale(1.1); /* Légère agrandissement au survol */
+    box-shadow: 0 4px 8px rgba(255, 71, 71, 0.5); /* Ombre plus marquée */
+}
+
+/* Icône de la croix */
+.deleteButton::before {
+    content: '✖'; /* Unicode pour la croix */
+    font-size: 18px; /* Taille de la croix ajustée */
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
